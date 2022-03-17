@@ -250,6 +250,7 @@ module.exports = class txChungus {
     //================================================================
 
     /* Watch commands folder & banned strings file */
+    //FIXME: https://www.npmjs.com/package/debounce
     async setupWatchers () {
         const cmdWatcher = chokidar.watch(commandsFolderPath, { persistent: true })
         cmdWatcher.on('change', file => {
@@ -314,7 +315,7 @@ module.exports = class txChungus {
                 color: 0x4287F5,
                 description: `Hello, apparently I was dead for a sec, but now it's all fine... right?!`,
             });
-            this.sendAnnouncement({embeds: [outMsg]}); !
+            this.sendAnnouncement({embeds: [outMsg]});
             this.setupEvents();
         });
 
