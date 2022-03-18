@@ -1,6 +1,7 @@
 {
     "latest": "v4.13.3",
     "available": true,
+    "isRecommended": true,
     "fxsVersion": 5401,
     "fxsArtifacts": {
         "windows": "https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/5401-ee1490e5a871d3c82112ea09ffa462cfb4ba974f/server.7z",

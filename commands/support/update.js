@@ -38,16 +38,21 @@ module.exports = {
 
         //Preparing the message
         if (GlobalData.txVersions.available) { 
+            const isOutdatedMessage = !GlobalData.txVersions.isRecommended
+                ? '**<a:alert:897525925950914600> The "latest recommended" is outdated, use the links below!**'
+                : '';
             const updateMessage = new MessageEmbed({
                 color: 0x69E0B9,
                 title: `How to get txAdmin ${GlobalData.txVersions.latest}:`,
                 description: `:point_right: You just need to update to artifact ${emojify(GlobalData.txVersions.fxsVersion)}
 :point_right: You can just drag and drop to replace the files.
-
-**<a:alert:897525925950914600> The "latest recommended" is outdated, use the links below!**
+${isOutdatedMessage}
 [<:windows:791692679419265044> Download Windows Artifact](${GlobalData.txVersions.fxsArtifacts.windows}).
 [<:linux:780972840454979604> Download Linux Artifact](${GlobalData.txVersions.fxsArtifacts.linux}).
-<:zap:823668080994811906> For ZAP Game Servers, make sure you select the "latest" version and then restart txAdmin.`
+<:zap:823668080994811906> For ZAP Game Servers, make sure you select the "latest" version and then restart txAdmin.`,
+                image: !GlobalData.txVersions.isRecommended && {
+                    url: 'https://i.imgur.com/OMcCVIW.png'
+                }
             });
             return message.channel.send({
                 content: (mentionString) ? mentionString : undefined, 

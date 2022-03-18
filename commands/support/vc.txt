@@ -1,3 +1,0 @@
-FXServer requires VC2019 and won't start without it.
-Install Visual C++ 2019 from the following link:
-<https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads>
