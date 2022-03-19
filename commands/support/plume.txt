@@ -1,2 +1,3 @@
 PlumeESX is no longer a thing.  
-Actually ESX in general is no longer a thing, so you better just getting the QBCore Recipe.
+However, ESX now has there own official Recipe that you can use!
+Just simply select the Remote URL template and paste: https://raw.githubusercontent.com/esx-framework/ESX-recipes/legacy/recipe.yaml
